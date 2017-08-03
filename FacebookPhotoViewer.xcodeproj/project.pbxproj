@@ -13,6 +13,10 @@
 		FCABE1861F33445D00CFAC25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCABE1851F33445D00CFAC25 /* Assets.xcassets */; };
 		FCABE1891F33445D00CFAC25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCABE1871F33445D00CFAC25 /* LaunchScreen.storyboard */; };
 		FCABE1941F33445D00CFAC25 /* FacebookPhotoViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCABE1931F33445D00CFAC25 /* FacebookPhotoViewerTests.swift */; };
+		FCABE1A11F33490300CFAC25 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABE19F1F33490300CFAC25 /* FBSDKCoreKit.framework */; };
+		FCABE1A21F33490300CFAC25 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABE19F1F33490300CFAC25 /* FBSDKCoreKit.framework */; };
+		FCABE1A31F33490300CFAC25 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABE1A01F33490300CFAC25 /* FBSDKLoginKit.framework */; };
+		FCABE1A41F33490300CFAC25 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCABE1A01F33490300CFAC25 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 		FCABE18F1F33445D00CFAC25 /* FacebookPhotoViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookPhotoViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCABE1931F33445D00CFAC25 /* FacebookPhotoViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookPhotoViewerTests.swift; sourceTree = "<group>"; };
 		FCABE1951F33445D00CFAC25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCABE19F1F33490300CFAC25 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		FCABE1A01F33490300CFAC25 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCABE1A31F33490300CFAC25 /* FBSDKLoginKit.framework in Frameworks */,
+				FCABE1A11F33490300CFAC25 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCABE1A41F33490300CFAC25 /* FBSDKLoginKit.framework in Frameworks */,
+				FCABE1A21F33490300CFAC25 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 				FCABE1851F33445D00CFAC25 /* Assets.xcassets */,
 				FCABE1871F33445D00CFAC25 /* LaunchScreen.storyboard */,
 				FCABE18A1F33445D00CFAC25 /* Info.plist */,
+				FCABE19E1F3348B900CFAC25 /* Facebook Frameworks */,
 			);
 			path = FacebookPhotoViewer;
 			sourceTree = "<group>";
@@ -94,6 +105,16 @@
 				FCABE1951F33445D00CFAC25 /* Info.plist */,
 			);
 			path = FacebookPhotoViewerTests;
+			sourceTree = "<group>";
+		};
+		FCABE19E1F3348B900CFAC25 /* Facebook Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCABE19F1F33490300CFAC25 /* FBSDKCoreKit.framework */,
+				FCABE1A01F33490300CFAC25 /* FBSDKLoginKit.framework */,
+			);
+			name = "Facebook Frameworks";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +360,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FacebookPhotoViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift3.FacebookPhotoViewer;
@@ -351,6 +376,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FacebookPhotoViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift3.FacebookPhotoViewer;
@@ -364,6 +393,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FacebookPhotoViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift3.FacebookPhotoViewerTests;
@@ -378,6 +411,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FacebookPhotoViewerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = swift3.FacebookPhotoViewerTests;
@@ -406,6 +443,7 @@
 				FCABE19A1F33445D00CFAC25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCABE19B1F33445D00CFAC25 /* Build configuration list for PBXNativeTarget "FacebookPhotoViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +452,7 @@
 				FCABE19D1F33445D00CFAC25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
